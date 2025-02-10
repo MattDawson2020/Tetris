@@ -109,7 +109,23 @@ def main():
     while True:
         screen.fill(BLACK)
         for event in pygame.event.get():
-            print(event)
+
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                sys.exit()
+
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_LEFT:
+                    print("LEFT")
+                if event.key == pygame.K_RIGHT:
+                    print("RIGHT")
+                if event.key == pygame.K_DOWN:
+                    print("DOWN")
+                if event.key == pygame.K_UP:
+                    print("UP")
+                if event.key == pygame.K_SPACE:
+                    print("SPACE")
+
 
 if __name__ == "__main__":
     main()
